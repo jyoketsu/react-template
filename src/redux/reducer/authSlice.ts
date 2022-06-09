@@ -32,6 +32,12 @@ export const authSlice = createSlice({
     // Use the PayloadAction type to declare the contents of `action.payload`
     setUser: (state, action: PayloadAction<User>) => {
       state.user = action.payload;
+      state.expired = false;
+    },
+    logout: (state) => {
+      state.user = null;
+      state.expired = true;
+      localStorage.clear();
     },
   },
   extraReducers: (builder) => {
@@ -41,12 +47,13 @@ export const authSlice = createSlice({
       (state, action: PayloadAction<any>) => {
         // Add user to the state array
         state.user = action.payload.result;
+        state.expired = false;
         api.setToken(action.payload.result.token);
       }
     );
   },
 });
 
-export const { setUser } = authSlice.actions;
+export const { setUser, logout } = authSlice.actions;
 
 export default authSlice.reducer;

@@ -1,0 +1,14 @@
+{
+  "login": "Login",
+  "loginTooltip": "account:1234567890 password:123456",
+  "menu": {
+    "menu": "menu",
+    "logout": "logout",
+    "darkMode": "Dark Mode",
+    "lightMode": "Light Mode"
+  },
+  "page": {
+    "page1": "page1",
+    "page2": "page2"
+  }
+}

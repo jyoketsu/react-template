@@ -1,0 +1,14 @@
+{
+  "login": "登錄",
+  "loginTooltip": "賬號：1234567890，密碼：123456",
+  "menu": {
+    "menu": "菜單",
+    "logout": "登出",
+    "darkMode": "暗黑模式",
+    "lightMode": "亮色模式"
+  },
+  "page": {
+    "page1": "頁面1",
+    "page2": "頁面2"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "login": "登录",
+  "loginTooltip": "账号：1234567890，密码：123456",
+  "menu": {
+    "menu": "菜单",
+    "logout": "登出",
+    "darkMode": "暗黑模式",
+    "lightMode": "亮色模式"
+  },
+  "page": {
+    "page1": "页面1",
+    "page2": "页面2"
+  }
+}

@@ -1,5 +1,6 @@
-import { Box, Tooltip } from "@mui/material";
+import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
+import Tooltip from "@mui/material/Tooltip";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
@@ -8,6 +9,7 @@ import Sample from "../../components/common/Sample";
 import { useAppSelector } from "../../redux/hooks";
 
 export default function Welcome() {
+  const BASE = import.meta.env.VITE_BASE;
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
@@ -15,7 +17,7 @@ export default function Welcome() {
 
   const handleLogin = () => {
     if (user) {
-      navigate("/");
+      navigate(BASE);
     } else {
       setOpen(true);
     }
@@ -33,7 +35,10 @@ export default function Welcome() {
       }}
     >
       <Sample />
-      <Tooltip title="账号：1234567890 密码：123456" arrow>
+      <Tooltip
+        title={t("loginTooltip", { account: "1234567890", password: "123456" })}
+        arrow
+      >
         <Button
           variant="contained"
           size="large"

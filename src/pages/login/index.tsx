@@ -11,6 +11,7 @@ export default function Login() {
   const dispatch = useAppDispatch();
   const navigage = useNavigate();
   const user = useAppSelector((state) => state.auth.user);
+  const BASE = import.meta.env.VITE_BASE;
 
   // 通过token登录
   useEffect(() => {
@@ -23,7 +24,7 @@ export default function Login() {
   // 登录成功后跳转到首页
   useEffect(() => {
     if (user) {
-      navigage("/");
+      navigage(BASE);
     }
   }, [user]);
 

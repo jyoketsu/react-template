@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import AccountDiaglog from "../../components/auth/AccountDiaglog";
 import Sample from "../../components/common/Sample";
 import { useAppSelector } from "../../redux/hooks";
+import { is_mobile } from "../../utils/util";
 
 export default function Welcome() {
   const BASE = import.meta.env.VITE_BASE;
@@ -19,7 +20,19 @@ export default function Welcome() {
     if (user) {
       navigate(BASE);
     } else {
-      setOpen(true);
+      if (is_mobile()) {
+        const BASE = import.meta.env.VITE_BASE;
+        const redirect = encodeURIComponent(
+          `${window.location.protocol}//${window.location.host}${BASE}login`
+        );
+        const logo = "https://notes.qingtime.cn/icons/logo2.svg";
+        const APP = import.meta.env.VITE_APP;
+        const APP_HIGH = import.meta.env.VITE_APP_HIGH;
+        const url = `https://account.qingtime.cn?app=${APP}&apphigh=${APP_HIGH}&logo=${logo}&redirect=${redirect}&t=${new Date().getTime()}`;
+        window.location.href = url;
+      } else {
+        setOpen(true);
+      }
     }
   };
 

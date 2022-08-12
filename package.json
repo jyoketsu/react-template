@@ -1,11 +1,13 @@
 {
   "name": "react-example",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "sync": "rsync -r dist/* root@132.232.47.47:/home/work/websites/react-example",
+    "deploy": "npm run build && npm run sync"
   },
   "dependencies": {
     "@emotion/react": "^11.9.0",

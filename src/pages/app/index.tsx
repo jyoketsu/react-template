@@ -60,7 +60,8 @@ export default function App() {
   };
 
   const handleNavigate = (path: string) => {
-    navigate(path);
+    const BASE = import.meta.env.VITE_BASE;
+    navigate(path || BASE);
     toggleDrawer();
   };
 

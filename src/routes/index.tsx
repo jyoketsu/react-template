@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "../pages/home";
-import Page1 from "../pages/home/page1";
-import Page2 from "../pages/home/page2";
+import App from "../pages/app";
+import Page1 from "../pages/app/page1";
+import Page2 from "../pages/app/page2";
 import Welcome from "../pages/welcome";
 import Login from "../pages/login";
 import { useMemo } from "react";
@@ -67,8 +67,8 @@ export default function Router() {
       <CssBaseline />
       <BrowserRouter>
         <Routes>
-          <Route path={BASE} element={<Home />}>
-            <Route path="page1" element={<Page1 />} />
+          <Route path={BASE} element={<App />}>
+            <Route index element={<Page1 />} />
             <Route path="page2" element={<Page2 />} />
           </Route>
           <Route path={`${BASE}welcome`} element={<Welcome />} />

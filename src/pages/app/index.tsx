@@ -25,7 +25,7 @@ import { useAppSelector, useAppDispatch } from "../../redux/hooks";
 import { logonByToken, logout } from "../../redux/reducer/authSlice";
 import { setDark } from "../../redux/reducer/commonSlice";
 
-export default function Home() {
+export default function App() {
   const { t, i18n } = useTranslation();
   const BASE = import.meta.env.VITE_BASE;
   const user = useAppSelector((state) => state.auth.user);
@@ -119,7 +119,7 @@ export default function Home() {
         <Box sx={{ width: 250 }}>
           <List>
             <ListItem>
-              <ListItemButton onClick={() => handleNavigate("page1")}>
+              <ListItemButton onClick={() => handleNavigate("")}>
                 <ListItemText primary={t("page.page1")} />
               </ListItemButton>
             </ListItem>

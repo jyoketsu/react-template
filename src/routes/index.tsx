@@ -77,7 +77,7 @@ export default function Router() {
           <Route path={`${BASE}login`} element={<Login />} />
         </Routes>
       </BrowserRouter>
-      <Loading />
+      {loading ? <Loading /> : null}
     </ThemeProvider>
   );
 }

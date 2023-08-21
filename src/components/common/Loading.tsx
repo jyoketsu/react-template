@@ -15,7 +15,7 @@ export default function Loading() {
         alignItems: "center",
       }}
     >
-      <CircularProgress size={28} color="inherit" />
+      <CircularProgress size={28} color="primary" />
     </Box>
   );
 }

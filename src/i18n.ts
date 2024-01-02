@@ -2,6 +2,12 @@ import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import Backend from "i18next-http-backend";
 import LanguageDetector from "i18next-browser-languagedetector";
+import zh from "./locales/zh/translation.json";
+import zhCn from "./locales/zh-cn/translation.json";
+import zhTw from "./locales/zh-tw/translation.json";
+import en from "./locales/en/translation.json";
+import ja from "./locales/ja/translation.json";
+
 // don't want to use this?
 // have a look at the Quick start guide
 // for passing in lng and translations on init
@@ -18,6 +24,23 @@ i18n
   // init i18next
   // for all options read: https://www.i18next.com/overview/configuration-options
   .init({
+    resources: {
+      // zh: {
+      //   translation: zh,
+      // },
+      "zh-CN": {
+        translation: zhCn,
+      },
+      "zh-TW": {
+        translation: zhTw,
+      },
+      en: {
+        translation: en,
+      },
+      ja: {
+        translation: ja,
+      },
+    },
     fallbackLng: "en",
     debug: true,
     interpolation: {

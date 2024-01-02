@@ -12,7 +12,7 @@ export default function Sample() {
       }}
     >
       <img src={reactLogo} className="reactLogo" alt="React logo" />
-      <h1>React Example</h1>
+      <h1>React Template</h1>
       <span>
         Vite + React + TypeScript + React-Router + Redux-Toolkit + Material-UI +
         react-i18next

@@ -1,11 +1,8 @@
-import { defineConfig, loadEnv } from "vite";
-import react from "@vitejs/plugin-react";
+import { reactRouter } from "@react-router/dev/vite";
+import tailwindcss from "@tailwindcss/vite";
+import { defineConfig } from "vite";
+import tsconfigPaths from "vite-tsconfig-paths";
 
-// https://vitejs.dev/config/
-export default ({ mode }) => {
-  const env = loadEnv(mode, process.cwd());
-  return defineConfig({
-    plugins: [react()],
-    base: env.VITE_BASE,
-  });
-};
+export default defineConfig({
+  plugins: [tailwindcss(), reactRouter(), tsconfigPaths()],
+});

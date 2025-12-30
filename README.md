@@ -1,47 +1,87 @@
-```
- ________  _______   ________  ________ _________
-|\   __  \|\  ___ \ |\   __  \|\   ____\\___   ___\
-\ \  \|\  \ \   __/|\ \  \|\  \ \  \___\|___ \  \_|
- \ \   _  _\ \  \_|/_\ \   __  \ \  \       \ \  \
-  \ \  \\  \\ \  \_|\ \ \  \ \  \ \  \____   \ \  \
-   \ \__\\ _\\ \_______\ \__\ \__\ \_______\  \ \__\
-    \|__|\|__|\|_______|\|__|\|__|\|_______|   \|__|
-```
+# Welcome to React Router!
 
-## 简介
+A modern, production-ready template for building full-stack React applications using React Router.
 
-react-template。使用 `Vite + React + TypeScript + React-Router + Redux-Toolkit + Material-UI + react-i18next` 开发。支持多语言和暗黑模式。
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
 
-## 使用技术
+## Features
 
-- [Vite](https://www.vitejs.net/) - 构建工具
-- [React](https://zh-hans.reactjs.org/) - 框架
-- [React Router](https://reactrouter.com/docs/en/v6) - 路由
-- [React Redux](https://react-redux.js.org/) - 状态管理
-- [Redux Toolkit](https://redux-toolkit.js.org/) - 编写 Redux 逻辑的方法
-- [Material UI](https://mui.com/zh/material-ui/getting-started/usage/) - ui 库
-- [react-i18next](https://react.i18next.com) 多语言
+- 🚀 Server-side rendering
+- ⚡️ Hot Module Replacement (HMR)
+- 📦 Asset bundling and optimization
+- 🔄 Data loading and mutations
+- 🔒 TypeScript by default
+- 🎉 TailwindCSS for styling
+- 📖 [React Router docs](https://reactrouter.com/)
 
-## [online-demo](https://jyoketsu.github.io/react-template/)
+## Getting Started
 
-## 安装
+### Installation
 
-```
-yarn
+Install the dependencies:
+
+```bash
+npm install
 ```
 
-## 启动服务
+### Development
 
-```
-yarn dev
-```
+Start the development server with HMR:
 
-## 编译并发布
-
-```
-yarn deploy
+```bash
+npm run dev
 ```
 
-## 注意
+Your application will be available at `http://localhost:5173`.
 
-将本项目用户新建项目时，注意将.env 文件中的`VITE_BASE=/react-template/`改为`VITE_BASE=/`，原因见[github-pages](https://cn.vitejs.dev/guide/static-deploy.html#github-pages)，.github/workflows 中的部署至 github-pages 也改为自己的部署。
+## Building for Production
+
+Create a production build:
+
+```bash
+npm run build
+```
+
+## Deployment
+
+### Docker Deployment
+
+To build and run using Docker:
+
+```bash
+docker build -t my-app .
+
+# Run the container
+docker run -p 3000:3000 my-app
+```
+
+The containerized application can be deployed to any platform that supports Docker, including:
+
+- AWS ECS
+- Google Cloud Run
+- Azure Container Apps
+- Digital Ocean App Platform
+- Fly.io
+- Railway
+
+### DIY Deployment
+
+If you're familiar with deploying Node applications, the built-in app server is production-ready.
+
+Make sure to deploy the output of `npm run build`
+
+```
+├── package.json
+├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
+├── build/
+│   ├── client/    # Static assets
+│   └── server/    # Server-side code
+```
+
+## Styling
+
+This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+
+---
+
+Built with ❤️ using React Router.
